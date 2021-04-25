@@ -1,0 +1,8 @@
+FROM jjanzic/docker-python3-opencv
+WORKDIR /code
+ADD iWebLens_server.py /code
+ADD /yolo_tiny_configs/ /code/yolo_tiny_configs/
+COPY remrequients.txt requirements.txt
+RUN pip3 install -r requirements.txt
+RUN pip3 install numpy
+CMD [ "python3", "/code/iWebLens_server.py" ]

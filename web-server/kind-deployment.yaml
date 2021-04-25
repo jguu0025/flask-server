@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-flask-server-deploy
+spec:
+  selector:
+    matchLabels:
+      app: my-flask-server
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: my-flask-server
+    spec:
+      containers:
+        - name: my-flask-server
+          image: f11sh/flask-api
+          ports:
+            - containerPort: 5000
+          resources:
+            limits:
+              cpu: "0.5"
+            requests:
+              cpu: "0.5"
