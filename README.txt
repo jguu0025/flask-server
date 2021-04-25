@@ -1,6 +1,6 @@
 # flask-server
-python3<br/>
-flask RESTful api server<br/>
-opencv & Yolo ---- object detection<br/>
-docker<br/>
-kubernetes service<br/>
+python3
+flask RESTful api server
+opencv & Yolo ---- object detection
+docker
+kubernetes service
